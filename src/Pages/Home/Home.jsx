@@ -1,17 +1,15 @@
 import React from "react";
-import Navbar from "../../Components/Navbar";
 import HomeHero from "./HomeHero";
 import HomeLiveStock from "./HomeLiveStock";
+import MyContainer from "../../Custom-Hooks/MyContainer";
 
 const Home = () => {
   return (
-    <div>
-      <Navbar></Navbar>
+    <MyContainer>
       <HomeHero></HomeHero>
       <HomeLiveStock></HomeLiveStock>
-    </div>
+    </MyContainer>
   );
 };
 
 export default Home;
-<Navbar></Navbar>;

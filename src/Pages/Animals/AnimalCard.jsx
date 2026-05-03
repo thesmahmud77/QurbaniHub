@@ -3,8 +3,8 @@ import { FaTags } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
 import { RiScales3Fill } from "react-icons/ri";
 
-const LiveStockCard = ({ animalCard }) => {
-  // console.log(animalCard);
+const AnimalCard = ({ singleAnimalCard }) => {
+  //   console.log(singleAnimalCard);
   const {
     image,
     animalId,
@@ -14,7 +14,7 @@ const LiveStockCard = ({ animalCard }) => {
     price,
     weight,
     location,
-  } = animalCard;
+  } = singleAnimalCard;
   return (
     <div className="rounded-[10px] border-gray-200 border-[1px]">
       <figure>
@@ -62,4 +62,4 @@ const LiveStockCard = ({ animalCard }) => {
   );
 };
 
-export default LiveStockCard;
+export default AnimalCard;
