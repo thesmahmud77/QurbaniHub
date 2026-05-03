@@ -28,22 +28,33 @@
 /* text Color */
 /* text Color */
 .textSecondary {
-  @apply bg-[#CFECFF];
+  @apply text-[#CFECFF];
 }
 .textPrimary {
-  @apply bg-[#CFECFF];
+  @apply text-[#CFECFF];
 }
 .HeadingColor {
-  @apply bg-[#0F172A];
+  @apply text-[#0F172A];
 }
 .paraColor {
-  @apply bg-[#64748B];
+  @apply text-[#64748B];
 }
 .parYellow {
-  @apply bg-[#973C00];
+  @apply text-[#973C00];
 }
 
 /* Flex itmes */
 .flexCenter {
   @apply flex items-center justify-center;
+}
+
+/* Buttons */
+/* Buttons */
+/* Buttons */
+
+.btnPrimary {
+  @apply text-[14px] bg-[#0284C7] px-10 py-3 text-white rounded-[8px];
+}
+.btnSecondary {
+  @apply text-[14px] bg-[#F1F5F9] px-10 py-3 text-black rounded-[8px];
 }

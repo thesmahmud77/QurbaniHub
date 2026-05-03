@@ -1,13 +1,15 @@
 import React from "react";
-import MyContainer from "../Custom-Hooks/MyContainer";
+import Navbar from "../../Components/Navbar";
 import HomeHero from "./HomeHero";
 
 const Home = () => {
   return (
-    <MyContainer>
+    <div>
+      <Navbar></Navbar>
       <HomeHero></HomeHero>
-    </MyContainer>
+    </div>
   );
 };
 
 export default Home;
+<Navbar></Navbar>;

@@ -1,4 +1,6 @@
 import React from "react";
+import customerPhotos from "../../assets/customers.png";
+import cowImg from "../../assets/Home-hero-image.jpg";
 
 const HomeHero = () => {
   return (
@@ -9,7 +11,7 @@ const HomeHero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-1.5 rounded-full text-sm font-semibold">
             <span className="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></span>
-            100% Verified Farmsx
+            100% Verified Farms
           </div>
 
           {/* Main Heading */}
@@ -27,32 +29,14 @@ const HomeHero = () => {
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-4">
-            <button className="btn btn-lg bg-blue-600 hover:bg-blue-700 text-white border-none px-8 rounded-xl">
-              Browse Animals
-            </button>
-            <button className="btn btn-lg btn-ghost bg-slate-100 hover:bg-slate-200 text-slate-700 px-8 rounded-xl">
-              How it Works
-            </button>
+            <button className="btnPrimary">Browse Animals</button>
+            <button className="btnSecondary">How it Works</button>
           </div>
 
           {/* Trust Stats */}
           <div className="flex items-center gap-4 pt-4">
             <div className="avatar-group -space-x-4 rtl:space-x-reverse">
-              <div className="avatar border-white">
-                <div className="w-10">
-                  <img src="https://i.ibb.co/L8N7pC7/user1.png" alt="user" />
-                </div>
-              </div>
-              <div className="avatar border-white">
-                <div className="w-10">
-                  <img src="https://i.ibb.co/Mgs7z1q/user2.png" alt="user" />
-                </div>
-              </div>
-              <div className="avatar border-white">
-                <div className="w-10">
-                  <img src="https://i.ibb.co/qY70YfM/user3.png" alt="user" />
-                </div>
-              </div>
+              <img src={customerPhotos} alt="" />
             </div>
             <p className="text-sm text-slate-500">
               <span className="font-bold text-slate-800">2,000+</span> happy
@@ -64,11 +48,7 @@ const HomeHero = () => {
         {/* Right Side: Image with Floating Card */}
         <div className="relative group">
           <div className="rounded-[40px] overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
-            <img
-              src="https://i.ibb.co/v4mD84m/premium-bull.jpg"
-              alt="Premium Brahman Bull"
-              className="w-full h-full object-cover"
-            />
+            <img src={cowImg} className="w-full h-[750px] object-cover" />
           </div>
 
           {/* Floating Price Card */}
