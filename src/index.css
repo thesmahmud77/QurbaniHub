@@ -1,2 +1,49 @@
+* {
+  background: #ffffff;
+}
+
 @import "tailwindcss";
-@plugin "daisyui";
+/* @plugin "daisyui"; */
+
+/* Bg-Color */
+/* Bg-Color */
+/* Bg-Color */
+.bgPrimary {
+  @apply bg-[#0284C7];
+}
+.textPrimary {
+  @apply bg-[#0284C7];
+}
+.bgBlack {
+  @apply bg-[#0F172A];
+}
+.bgGray {
+  @apply bg-[#F1F5F9];
+}
+.bgYellow {
+  @apply bg-[#FEF3C6];
+}
+/* 
+/* text Color */
+/* text Color */
+/* text Color */
+.textSecondary {
+  @apply bg-[#CFECFF];
+}
+.textPrimary {
+  @apply bg-[#CFECFF];
+}
+.HeadingColor {
+  @apply bg-[#0F172A];
+}
+.paraColor {
+  @apply bg-[#64748B];
+}
+.parYellow {
+  @apply bg-[#973C00];
+}
+
+/* Flex itmes */
+.flexCenter {
+  @apply flex items-center justify-center;
+}
