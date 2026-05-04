@@ -40,11 +40,11 @@ export default function Register() {
   return (
     <MyContainer>
       <div className="min-h-screen">
-        <div className=" bgSecondary flexCenter flex-col">
+        <div className=" flexCenter flex-col mt-30">
           <img src={logo} alt="" />
           <h1 className="text-2xl font-bold">QurbaniHub</h1>
         </div>
-        <div className="w-100 border-2 border-gray-200 text-center mx-auto py-25 mt-15">
+        <div className="w-100 border-2 border-gray-200 text-center mx-auto py-25 mt-5">
           <h1 className="text-2xl font-bold">Create Your Account</h1>
           <p>Join QurbaniHub to find your perfect animal.</p>
           <form onSubmit={handleRegister}>
