@@ -2,6 +2,7 @@ import React from "react";
 import { FaTags } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
 import { RiScales3Fill } from "react-icons/ri";
+import { Link } from "react-router";
 
 const AnimalCard = ({ singleAnimalCard }) => {
   //   console.log(singleAnimalCard);
@@ -14,6 +15,7 @@ const AnimalCard = ({ singleAnimalCard }) => {
     price,
     weight,
     location,
+    id,
   } = singleAnimalCard;
   return (
     <div className="rounded-[10px] border-gray-200 border-[1px]">
@@ -52,10 +54,8 @@ const AnimalCard = ({ singleAnimalCard }) => {
             </h3>
           </div>
         </div>
-        <div>
-          <button className="bgSecondary textPrimary text-[18px] w-full py-3 mt-5">
-            View Details
-          </button>
+        <div className="bgSecondary textPrimary text-[18px] w-full py-3 mt-5 flexCenter">
+          <Link to={`/animalsDetails/${id}`}>View Details</Link>
         </div>
       </div>
     </div>

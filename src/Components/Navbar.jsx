@@ -1,11 +1,10 @@
 import React from "react";
-import MyContainer from "../Custom-Hooks/MyContainer";
 import navpic from "../assets/logo.png";
 import { NavLink } from "react-router";
 
 const Navbar = () => {
   return (
-    <div className="bg-red-500 grid grid-cols-12 items-center text-center">
+    <div className=" grid grid-cols-12 items-center text-center">
       <div className="px-[50px] py-[10px] flexCenter gap-2 col-span-3">
         <img src={navpic} alt="" />
         <h1 className="font-bold text-2xl">QurbaniHub</h1>
