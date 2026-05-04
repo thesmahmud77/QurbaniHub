@@ -1,7 +1,7 @@
 import React, { use } from "react";
 import MyContainer from "../../Custom-Hooks/MyContainer";
 import logo from "../../assets/logo.png";
-import { Link, useLocation, useNavigate } from "react-router";
+import { Link, Navigate, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../Provider/AuthContext";
 
 export default function Login() {
@@ -14,8 +14,8 @@ export default function Login() {
       .then((result) => {
         const user = result.user;
         console.log(user);
-        SetUser(result);
-        navigate(`${location.state ? location.state : "/"}`);
+        SetUser(result.user);
+        navigate(location.state ? location.state : "/");
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -33,8 +33,8 @@ export default function Login() {
       .then((result) => {
         const user = result.user;
         console.log(user);
-        SetUser(result);
-        navigate(`${location.state ? location.state : "/"}`);
+        SetUser(result.user);
+        navigate(location.state ? location.state : "/");
       })
       .catch((error) => {
         const errorCode = error.code;
