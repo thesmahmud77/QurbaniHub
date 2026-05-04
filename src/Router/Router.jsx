@@ -5,6 +5,7 @@ import Animals from "../Pages/Animals/Animals";
 import AnimalDetails from "../Pages/Animals/AnimalDetails";
 import Login from "../Pages/Auth/Login";
 import Register from "../Pages/Auth/Register";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -17,7 +18,11 @@ export const router = createBrowserRouter([
   },
   {
     path: "/animalsDetails/:id",
-    element: <AnimalDetails></AnimalDetails>,
+    element: (
+      <PrivateRoute>
+        <AnimalDetails></AnimalDetails>
+      </PrivateRoute>
+    ),
   },
   {
     path: "/login",

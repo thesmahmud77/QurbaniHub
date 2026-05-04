@@ -8,7 +8,7 @@ import { MdLocationOn } from "react-icons/md";
 
 const AnimalDetails = () => {
   const { id } = useParams();
-  console.log(id);
+  // console.log(id);
   const { data, loader } = useLoaderAnimals();
   if (loader) {
     return <h1 className="text-center font-bold text-xl py-20">Loading...</h1>;
