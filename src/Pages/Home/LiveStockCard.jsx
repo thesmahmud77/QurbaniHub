@@ -2,6 +2,7 @@ import React from "react";
 import { FaTags } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
 import { RiScales3Fill } from "react-icons/ri";
+import { Link } from "react-router";
 
 const LiveStockCard = ({ animalCard }) => {
   // console.log(animalCard);
@@ -14,6 +15,7 @@ const LiveStockCard = ({ animalCard }) => {
     price,
     weight,
     location,
+    id,
   } = animalCard;
   return (
     <div className="rounded-[10px] border-gray-200 border-[1px]">
@@ -53,9 +55,12 @@ const LiveStockCard = ({ animalCard }) => {
           </div>
         </div>
         <div>
-          <button className="bgSecondary textPrimary text-[18px] w-full py-3 mt-5">
+          <Link
+            className="bgSecondary textPrimary text-[18px] w-full py-3 mt-5 flexCenter"
+            to={`/animalsDetails/${id}`}
+          >
             View Details
-          </button>
+          </Link>
         </div>
       </div>
     </div>

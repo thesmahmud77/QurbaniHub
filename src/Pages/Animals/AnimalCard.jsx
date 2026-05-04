@@ -54,8 +54,13 @@ const AnimalCard = ({ singleAnimalCard }) => {
             </h3>
           </div>
         </div>
-        <div className="bgSecondary textPrimary text-[18px] w-full py-3 mt-5 flexCenter">
-          <Link to={`/animalsDetails/${id}`}>View Details</Link>
+        <div>
+          <Link
+            className="bgSecondary textPrimary text-[18px] w-full py-3 mt-5 flexCenter"
+            to={`/animalsDetails/${id}`}
+          >
+            View Details
+          </Link>
         </div>
       </div>
     </div>
