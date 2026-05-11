@@ -1,6 +1,6 @@
 import React, { use, useContext } from "react";
 import navpic from "../assets/logo.png";
-import { Navigate, NavLink } from "react-router";
+import { Link, Navigate, NavLink } from "react-router";
 import { AuthContext } from "../Provider/AuthContext";
 import Swal from "sweetalert2";
 
@@ -28,16 +28,19 @@ const Navbar = () => {
 
   return (
     <div className=" grid grid-cols-12 items-center text-center">
-      <div className="px-[50px] py-[10px] flexCenter gap-2 col-span-3">
-        <img src={navpic} alt="" />
+      <Link
+        className="px-[50px] py-[10px] flexCenter gap-2 col-span-3"
+        to={"/"}
+      >
+        <img className="w-10" src={navpic} alt="" />
         <h1 className="font-bold text-2xl">QurbaniHub</h1>
-      </div>
+      </Link>
       <div className="col-span-6 flexCenter">
         <NavLink
           to={"/"}
           className={({ isActive }) =>
             isActive
-              ? "bgPrimary text-white font-semibold px-5 py-2 rounded-[5px]"
+              ? "text-gray-500 font-semibold px-5 py-2 text-[18px] font-bold underline decoration-wavy "
               : "text-gray-500 font-semibold px-5 py-2 rounded-[5px]"
           }
         >
@@ -47,7 +50,7 @@ const Navbar = () => {
           to={"/animals"}
           className={({ isActive }) =>
             isActive
-              ? "bgPrimary text-white font-semibold px-5 py-2 rounded-[5px]"
+              ? "text-gray-500 font-semibold px-5 py-2 text-[18px] font-bold underline decoration-wavy "
               : "text-gray-500 font-semibold px-5 py-2 rounded-[5px]"
           }
         >
@@ -56,12 +59,22 @@ const Navbar = () => {
       </div>
       <div className="col-span-3 flexCenter">
         {user ? (
-          <button
-            className={" font-semibold px-5 py-2 rounded-[5px] bgPrimary"}
-            onClick={() => handleLogout()}
-          >
-            Logout
-          </button>
+          <div>
+            <button
+              className={
+                " font-semibold px-5 py-2 rounded-[5px] border-2 border-gray-300"
+              }
+              onClick={() => handleLogout()}
+            >
+              Logout
+            </button>
+            <NavLink
+              to={"/profile"}
+              className={" font-semibold px-5 py-2 rounded-[5px] bgPrimary"}
+            >
+              Profile
+            </NavLink>
+          </div>
         ) : (
           <NavLink
             to={"/login"}

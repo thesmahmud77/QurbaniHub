@@ -6,6 +6,7 @@ import AnimalDetails from "../Pages/Animals/AnimalDetails";
 import Login from "../Pages/Auth/Login";
 import Register from "../Pages/Auth/Register";
 import PrivateRoute from "./PrivateRoute";
+import Profile from "../Pages/Profile/Profile";
 
 export const router = createBrowserRouter([
   {
@@ -29,7 +30,11 @@ export const router = createBrowserRouter([
     element: <Login></Login>,
   },
   {
-    path: "register",
+    path: "/register",
     element: <Register></Register>,
+  },
+  {
+    path: "/profile",
+    element: <Profile></Profile>,
   },
 ]);
